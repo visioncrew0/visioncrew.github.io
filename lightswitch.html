@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="maincont" style="flex-direction: row;display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div id="lightsOn" style="display: none; justify-content: center; align-items: center; height: 100vh; scale: 10%; flex: 1 0 0;">
+            <img id="lightOn" src="images/lightswitch0.png" class="image" onclick="switchImage()" style="cursor: pointer;"><br>
+        </div>    
+        <div id="lightsOff" style="display: flex; justify-content: center; align-items: center; height: 100vh; scale: 10%; flex: 1 0 0;">
+            <img id="lightOff" src="images/lightswitch1.png" class="image" onclick="switchImage()" style="cursor: pointer;"><br>
+        </div>
+        <div id="randitem" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex: 1 0 0;">
+            <!-- randitem -->
+        </div>
+    </div>
+    <div id="friend" style="flex-direction: row;display: flex; justify-content: center; align-items: center; height: 100vh;"></div>
+    <audio id="audio"></audio>
+    <audio id="audio2"></audio>
+    <script>
+        var on = false;
+        function redirectToURL(url, delay) {
+            setTimeout(function() {
+                window.location.href = url;
+            }, delay);
+        }
+        function switchImage() {
+            const lightsOn = document.getElementById("lightsOn");
+            const lightsOff = document.getElementById("lightsOff");
+            const audioTag = document.getElementById("audio");
+            const audioTag2 = document.getElementById("audio2");
+
+            audioTag.src = "audio/snd_noise.wav";
+            audioTag2.src = "audio/face.ogg";
+
+            if (on) {
+                lightsOn.style.display = "none";
+                lightsOff.style.display = "flex";
+                on = false;
+                removeElement("newimg");
+            } else {
+                lightsOn.style.display = "flex";
+                lightsOff.style.display = "none";
+                on = true;
+
+                const items = [
+                    { src: "images/lightswitch/speaker.gif", scale: "50%"},
+                    { src: "images/lightswitch/tvboy.gif", scale: "20%"},
+                    { src: "images/lightswitch/cocoa.gif", scale: "10%"},
+                    { src: "images/lightswitch/greendoor.png", scale: "50%"},
+                    { src: "images/lightswitch/hat.png", scale: "20%"},
+                    { src: "images/lightswitch/shadowman.gif", scale: "40%"},
+                    { src: "images/lightswitch/harvester.gif", scale: "80%", chance: 3},
+                    { src: "images/lightswitch/vessel.png", scale: "20%", chance: 2},
+                    { src: "images/lightswitch/friend.png", chance: 1},
+                ];
+
+                const itemsWithoutChance = items.filter(item => !item.chance);
+                const totalChance = items.reduce((acc, item) => acc + (item.chance || 0), 0);
+                const chanceForItemsWithoutChance = (100 - totalChance) / itemsWithoutChance.length;
+                const randomChance = Math.random() * 100;
+                
+                let selectedItem;
+                if (randomChance < totalChance) {
+                    let cumulativeChance = 0;
+                    for (const item of items) {
+                        cumulativeChance += item.chance || 0;
+                        if (randomChance < cumulativeChance) {
+                            selectedItem = item;
+                            break;
+                        }
+                    }
+                } else {
+                    const randomIndex = Math.floor(Math.random() * itemsWithoutChance.length);
+                    selectedItem = itemsWithoutChance[randomIndex];
+                }
+
+                if (selectedItem.src === "images/lightswitch/friend.png") {
+                    document.getElementById("maincont").style.display="none"
+                    document.getElementById("friend").innerHTML="<img src='images/lightswitch/friend.png' style='scale: 1000%'>"
+                    audioTag2.play();
+                    redirectToURL("index.html", 300);
+                }else{
+                    createIfNotExist(selectedItem.src, selectedItem.scale);
+                }
+            }
+            audioTag.play();
+        }
+
+        function createIfNotExist(src, scale) {
+            if (!document.getElementById("newimg")) {
+                const newImage = document.createElement("img");
+                newImage.id="newimg"
+                newImage.src = src;
+                newImage.className = "image";
+                newImage.style.scale = scale;
+                
+                document.getElementById("randitem").appendChild(newImage);
+            }
+        }
+
+        function removeElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.parentNode.removeChild(element);
+            }
+        }
+    </script>
+</body>
+</html>

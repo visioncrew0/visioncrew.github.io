@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<body>
+<script src="nav.js"></script>
+<br><br>
+<div><img src="images/headerlogo.png" alt="Vision Crew's Header" class="image"></div>
+<div style="font-size: 300%; font-family: main-jve;">OUR TEAM</div><br><br>
+
+<div class="profile-container" style="max-width: 1400px;">
+    <!-- LEADS -->
+    <div class="profile">
+        <img class="avatar" src="images/team/pine.png" alt="Avatar">
+        <div class="name">R.V Pine</div>
+        <div class="description">Team Leader / Composer / Writer</div>
+        <div class="larger-description">"Feed me a rock and I'll grant a wish"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/tweeko.png" alt="Avatar">
+        <div class="name">Tweeko</div>
+        <div class="description">Lead Programmer / Composer</div>
+        <div class="larger-description" id="days">"PINE LET ME OUT" day </div>
+        <script>
+            var todayRaw = new Date();
+            var todayYY = todayRaw.getFullYear();
+            var todayMM = todayRaw.getMonth();
+            var todayDD = todayRaw.getDate();
+            var today = new Date(todayYY, todayMM, todayDD);
+            var incident = new Date(2023, 6, 14);
+            var difference = Math.round((today - incident)/(1000*60*60*24));
+            document.querySelector('#days').innerHTML += difference;
+        </script>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/toosday.png" alt="Avatar">
+        <div class="name">toosday</div>
+        <div class="description">Lead Spriter</div>
+        <div class="larger-description" id="days">"tweenko i think you know what i'd put here"</div>
+    </div>
+    <!-- COMPOSERS -->
+    <div class="profile">
+        <img class="avatar" src="images/team/lex.png" alt="Avatar">
+        <div class="name">Lex</div>
+        <div class="description">Composer / Sprite Artist</div>
+        <div class="larger-description" id="days">"funny buddy"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/xnq.png" alt="Avatar">
+        <div class="name">xnq</div>
+        <div class="description">Composer / Programmer</div>
+        <div class="larger-description" id="days">"music"</div>
+    </div>
+    <!-- PROGRAMMERS -->
+    <div class="profile">
+        <img class="avatar" src="images/team/techno.png" alt="Avatar">
+        <div class="name">technocolour</div>
+        <div class="description">Programmer</div>
+        <div class="larger-description" id="days">"no i am not named after the song stop"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/jevilhumor.png" alt="Avatar">
+        <div class="name">jevilhumor</div>
+        <div class="description">Programmer</div>
+        <div class="larger-description" id="days">"eats uranium for the gains"</div>
+    </div>
+    <!-- TILE ARTISTS -->
+    <div class="profile">
+        <img class="avatar" src="images/team/oro.png" alt="Avatar">
+        <div class="name">orodelta</div>
+        <div class="description">Tile Artist / Sprite Artist</div>
+        <div class="larger-description" id="days">"ay cabron"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/ulm.jpg" alt="Avatar">
+        <div class="name">ulm</div>
+        <div class="description">Tile Artist / Sprite Artist</div>
+        <div class="larger-description" id="days">"tiny art squares"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/cybo.png" alt="Avatar">
+        <div class="name">cybo</div>
+        <div class="description">Tile Artist</div>
+        <div class="larger-description" id="days">"i practice the ancient and unknown crafts of "Tile Art" beware of my spells"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/cashmonet.jpg" alt="Avatar">
+        <div class="name">cashmonet</div>
+        <div class="description">Tile Artist / Sprite Artist</div>
+        <div class="larger-description" id="days">"i made a tileset 2 years ago"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/pizzatony.png" alt="Avatar">
+        <div class="name">pizzatony</div>
+        <div class="description">Tile Artist</div>
+        <div class="larger-description" id="days">"i'm crrrazy!!!!!!"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/yeeo.png" alt="Avatar">
+        <div class="name">yeeobun</div>
+        <div class="description">Sprite Artist</div>
+        <div class="larger-description" id="days">"i draw the funny. local burgerpants specialist"</div>
+    </div>
+    <!-- PROMO ARTISTS -->
+    <div class="profile">
+        <img class="avatar" src="images/team/marnie.png" alt="Avatar">
+        <div class="name">Marnie</div>
+        <div class="description">Promo Artist / Concept Artist</div>
+        <div class="larger-description" id="days">"concept artist" yeah no shit</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/beruki.jpg" alt="Avatar">
+        <div class="name">Beruki</div>
+        <div class="description">Promo Artist / Concept Artist</div>
+        <div class="larger-description" id="days">"MOM! that racoon is eating our trash again!"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/snerds.jpg" alt="Avatar">
+        <div class="name">snerds</div>
+        <div class="description">Voice Actor / Concept Artist</div>
+        <div class="larger-description" id="days">"this is my dog tonto everyone say hi tonto"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/badonkabonkers.png" alt="Avatar">
+        <div class="name">BadonkaBonkers</div>
+        <div class="description">Voice Actor / Concept Artist</div>
+        <div class="larger-description" id="days">"I for one find Roger Rabbit to be very relatable"</div>
+    </div>
+
+    <!-- VOICE ACTORS -->
+    <div class="profile">
+        <img class="avatar" src="images/team/mono.png" alt="Avatar">
+        <div class="name">Mono</div>
+        <div class="description">Voice Actor</div>
+        <div class="larger-description" id="days">"Commonly mistaken for Bigfoot"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/ruby.jpg" alt="Avatar">
+        <div class="name">Ruby</div>
+        <div class="description">Voice Actor (Tenna)</div>
+        <div class="larger-description" id="days">"Did you know the va for tenna is a 16 year old who makes fart and poop jokes?"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/serataph.png" alt="Avatar">
+        <div class="name">Serataph</div>
+        <div class="description">Voice Actor</div>
+        <div class="larger-description" id="days">"Beep boop! I may be a machine :-]"</div>
+    </div>
+    <div class="profile">
+        <img class="avatar" src="images/team/googigamer.png" alt="Avatar">
+        <div class="name">GooigiGamer</div>
+        <div class="description">Voice Actor</div>
+        <div class="larger-description" id="days">"I scream into the microphone and talk to friendly face in the mirror!"</div>
+    </div>
+</div>
+<br><br><br>
+</body>
+</html>

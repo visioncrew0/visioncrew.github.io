@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        html{
+            overflow: hidden;
+        }
+    </style>
+    <div id="pillowContainer" style="display: flex; justify-content: center; align-items: center; height: 100vh; scale: 200%">
+        <img id="pillowImage" src="images/noelleroom-pillow.png" class="image" onclick="switchImage()" style="cursor: pointer;"><br>
+    </div>    
+    <div id="roomContainer" style="display: none; justify-content: center; align-items: center; height: 100vh; scale: 200%">
+        <img id="roomImage" src="images/noelleroom.png" class="image"><br>
+    </div>    
+    <audio id="audio" loop>
+    <script>
+        function switchImage() {
+            const pillowContainer = document.getElementById("pillowContainer");
+            const roomContainer = document.getElementById("roomContainer");
+            const audioTag = document.getElementById("audio");
+            audioTag.src="audio/drone.mp3"
+            
+            pillowContainer.style.display = "none";
+            roomContainer.style.display = "flex";
+
+            audioTag.play();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+html{
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+@font-face {
+    font-family: 'main-jve';
+    src: url('fonts/8bitoperator-JVE.woff');
+}
+@font-face {
+    font-family: 'main-reg';
+	font-size: 150%;
+    src: url('fonts/8bitOperatorPlus-Regular.woff');
+}
+@font-face {
+    font-family: 'main-bold';
+	font-size: 100%;
+    src: url('fonts/8-bit Operator+ SC Bold.ttf');
+}
+.underline::after {
+    margin: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+    content: "";
+    display: block;
+    width: 600px;
+    border-bottom: 5px solid white;
+    margin-top: 2px;
+}
+.underline_yellow::after {
+    margin: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+    content: "";
+    display: block;
+    width: 600px;
+    border-bottom: 5px solid yellow;
+    margin-top: 2px;
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.logoimage-container{
+    line-height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container{
+    line-height: 000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+}
+.text-bold {
+    font-family: 'main-jve';
+    font-size: 250%;
+    text-align: center;
+    max-width: 100%;
+}
+.text-new {
+    font-family: 'main-jve';
+    font-size: 200%;
+    text-align: center;
+    color: red;
+    position: relative;
+    top: 40px;
+    z-index: 1
+}
+.navbar {
+    letter-spacing: 1px;
+    background-color: #347A61;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar a {
+    font-family: 'main-jve';
+    font-size: 150%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 20px;
+    transition: color 0.3s;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+}
+
+.bg {
+	display: block;
+	margin: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+	overflow: hidden;
+	float: center;
+	width: 600px;
+	z-index: 1;
+	visibility: visible;
+    position: relative;
+    transform: translateY(-240px); 
+}
+a {
+    text-decoration: none;
+    color: blue;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: yellow;
+}
+
+.idiot{
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-decoration: underline;
+    text-decoration-color: yellow
+}
+
+.logoimage{
+    display: block;
+	margin: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+	overflow: hidden;
+	float: center;
+	position: absolute;
+	width: 600px;
+	z-index: 1;
+	visibility: visible;
+    position: relative;
+}
+
+.image{
+    display: block;
+	margin: auto;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+	overflow: hidden;
+	float: center;
+	width: 600px;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+body {
+    /*overflow-x: hidden;*/
+    text-align: center;
+    font-family: 'main-reg';
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+}
+
+bottom {
+    color: #6e6e6e;
+    font-family: 'main-reg';
+    font-size: 50%;
+	vertical-align: bottom;
+	padding-top: 22px;
+	margin-bottom: 22px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.button-link {
+    position: relative;
+    font-family: 'main-jve';
+    text-decoration: none;
+    display: inline-block;
+    background-color: black;
+    padding: 10px;
+    border: 4px solid white;
+    color: white;
+    font-size: 200%;
+    transition: border-color 0.3s;
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+}
+
+.button-link:hover {
+    font-family: 'main-jve';
+    border-color: yellow;
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+}
+
+.button-content {
+    font-family: 'main-jve';
+    color: yellow;
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+}
+
+.button-title {
+    font-family: 'main-jve';
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+}
+
+.button-date {
+    font-family: 'main-jve';
+    color: rgb(110, 110, 110);
+    font-size: 75%;
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+}
+
+.button-image {
+    image-rendering: pixelated;
+    display: block;
+    margin: 0 auto; /* Center horizontally */
+    width: 560px;
+    z-index: 1;
+    visibility: visible;
+    position: relative; /* Either absolute or relative, depending on your layout needs */
+}
+
+.button-image img {
+    width: 100%;
+    height: auto; /* This maintains the image's aspect ratio */
+}
+
+/* Adding a fade effect */
+.button-image:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px; /* Adjust the height for the desired fade effect */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0, 1));
+    transform: translateY(-5px); 
+}
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%; /* Adjust this width to fit your design */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.profile {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    text-rendering: pixelated;
+    image-rendering: pixelated;
+    margin: 10px; /* Add margin to create some space between profiles */
+}
+.profile .larger-description {
+    opacity: 0;
+    transform: translateY(10px);
+    font-size: 16px;
+    margin-top: 10px;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    color: gray;
+}
+
+.profile:hover .larger-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 250%;
+    font-family: "main-jve";
+}
+
+.description {
+    text-align: center;
+}
